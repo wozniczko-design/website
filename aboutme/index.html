@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Adrian Woźniczko</title>
+    <link rel="icon" href="images/play.svg">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <header>
+            <div class="navigation">
+                <div class="left">
+                    <ul class="hamburger middle">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/aboutme" class="open">O mnie + Kontakt</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="center middle">
+                    <a href="/" title="Logo with 'Back to the homepage' power">
+                        <img class="logo" src="/images/AW-logo.svg" alt="Logo">
+                    </a>
+                </div>
+                <div class="right middle">
+                    <a href="" title="My behance profile">
+                        <img class="link" src="/images/behance-logo.svg" alt="Behance">
+                        <img class="link" src="/images/behance-logo-two.svg" alt="Behance">
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <article>
+            <div class="aboutme">
+                <img src="images/my-photo.jpg" alt="My photo">
+                <div class="text">
+                    <p>Jestem UI/UX designerem, urodziłem się i mieszkam w Krakowie.</p>
+                    <p>Po studiach szukałem swojego miejsca w świecie stron i aplikacji. Jako freelancer w ramach zleceń oraz projektów non-profit pisałem strony internetowe, projektowałem logo oraz tworzyłem projekty graficzne stron i aplikacji. Dzisiaj zajmuję się projektowaniem doświadczeń użytkownika.</p><p>Mając na uwadze cele marketingowe i biznesowe klienta chcę tworzyć doświadczenia i interfejsy, które spełniają potrzeby użytkowników. UI/UX design to dla mnie praca, która pozwala spełniać się kreatywnie. Projektowanie daje mi dużą przyjemność, a świadomość, że tworzę moje projekty w oparciu o ludzkie potrzeby daje mi jeszcze większą satysfakcję.</p>
+                    <p><span>E-mail:</span> adr.wozniczko@gmail.com</p>
+                    <button><a href="mailto:adr.wozniczko@gmail.com" class="main-button">Napisz do mnie</a></button>
+                </div>
+            </div>
+        </article>
+
+    <script defer>
+        const b = document.querySelector('.hamburger');
+        b.addEventListener('click', (ev) => {
+            ev.preventDefault();
+            b.classList.toggle('active');
+            document.querySelector('.menu').classList.toggle('active');
+        })
+    </script>
+
+</body>
+</html>

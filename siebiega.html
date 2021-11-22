@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Adrian Woźniczko</title>
+    <link rel="icon" href="/images/play.svg">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="navigation">
+            <div class="left">
+                <ul class="hamburger middle">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <div class="menu">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="./aboutme">O mnie + Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="center middle">
+                <a href="/" title="Logo with 'Back to the homepage' power">
+                    <img class="logo" src="/images/AW-logo.svg" alt="Logo">
+                </a>
+            </div>
+            <div class="right middle">
+                <a href="" title="My behance profile">
+                    <img class="link" src="/images/behance-logo.svg" alt="Behance">
+                    <img class="link" src="/images/behance-logo-two.svg" alt="Behance">
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <article>
+        <div class="work">
+            <div class="topic">
+                <p>Siebiega</p>
+            </div>
+            <div class="description">
+                <p>Redesign strony internetowej Świętokrzyskiego Stowarzyszenia Biegaczy. Siebiega jest jedynym tego typu stowarzyszeniem w Kielcach. Zadaniem jakie otrzymałem jest poprawa czytelności strony.</p>
+            </div>
+            <div class="topic">
+                <p>Odkrywanie</p>
+            </div>
+            <div class="description">
+                <p>Przeprowadziłem analizę kilku stron biegowych w Polsce. Konkurencja oferuje bardzo dużo informacji, co może prowadzić do tego, że użytkownika przytłacza ilość podanych informacji. Badania stwierdziły, że użytkownicy chcą zorganizować udział w evencie biegowym najlepiej na jednej stronie, od zapisu na bieg po nocleg w mieście organizowanego biegu.</p>
+            </div>
+            <div class="topic">
+                <p>Definiowanie</p>
+            </div>
+            <div class="description">
+                <p>W związku w pokaźną ilością informacji jaką może zawierać strona, musi być ona prosta i łatwa w obsłudze.</p>
+                <p>Główny problem, który wyodrębniłem to zapisy przyszłych uczestników na bieg. Wiele badań potwierdza, że większość użytkowników nie lubi wypełniać formularzy, dlatego proces zapisów musi być jak najmniej bolesny dla użytkownika.</p>
+                <p>Projektując strone podzieliłem odwiedzających stronę na kategorie: Osoby, które chcą rozpocząć przygodę z bieganiem lub biegają, weszły na stronę pierwszy raz przez przypadek; osoby, które znają siebiega, weszli na stronę by zobaczyć czy pojawiło się coś nowego; osoby, które są na facebookowym  fanpage'u i wiedzą o nadchodzącym biegu, weszły na stronę przez link facebookowego posta lub weszły na stronę po przeczytaniu posta o nadchodzącym biegu.</p>
+            </div>
+            <div class="topic">
+                <p>Mapa strony</p>
+            </div>
+            <div class="description">
+                <p>Mapa strony z naciskiem na drogę jaką musi pokonać użytkownik by zapisać się na bieg</p>
+            </div>
+            <div class="picture">
+                <img src="/images/projects/Siebiega-userflow.jpg" alt="Persona">
+            </div>
+            <div class="topic">
+                <p>Projektowanie</p>
+            </div>
+            <div class="description">
+                <p>W tym momencie jestem na etapie projektowania pierwszych widoków strony. Poniżej przedstawiam tylko jeden z kilku pomysłów.</p>
+            </div>
+            <div class="picture">
+                <img src="/images/projects/Siebiega-wireframe.jpg" alt="Persona">
+                <img src="/images/projects/Siebiega.jpg" alt="Persona">
+            </div>
+        </div>
+    </article>
+    
+    <script defer>
+        const b = document.querySelector('.hamburger');
+        b.addEventListener('click', (ev) => {
+            ev.preventDefault();
+            b.classList.toggle('active');
+            document.querySelector('.menu').classList.toggle('active');
+        })
+    </script>
+</body>
+</html>

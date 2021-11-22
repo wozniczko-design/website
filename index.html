@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Adrian Woźniczko</title>
+    <link rel="icon" href="images/play.svg">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <header>
+            <div class="navigation">
+                <div class="left">
+                    <ul class="hamburger middle">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="/" class="open">Home</a></li>
+                            <li><a href="./aboutme">O mnie + Kontakt</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="center middle">
+                    <a href="/" title="Logo with 'Back to the homepage' power">
+                        <img class="logo" src="images/AW-logo.svg" alt="Logo">
+                    </a>
+                </div>
+                <div class="right middle">
+                    <a href="" title="My behance profile">
+                        <img class="link" src="images/behance-logo.svg" alt="Behance">
+                        <img class="link" src="images/behance-logo-two.svg" alt="Behance">
+                    </a>
+                </div>
+            </div>
+        </header>
+        <section id="slider">
+            <main>
+                <div class="text">
+                    <h1>Pomogę Ci pogłębić <br>relacje między Twoim <br>produktem-klientami.</h1>
+                    <h2>Projektuję aplikacje, strony internetowe, <br>tworzę doświadczenia użytkownika</h2>
+                    <button><a href="#portfolio" class="main-button"><span></span>Portfolio</a></button>
+                </div>
+                <div class="background">
+                    <img src="images/vhs-cassette.svg" alt="">
+                    <img src="images/vhs-tape.svg" alt="" id="tape" class="tape">
+                    <img src="images/vhs-box.svg" alt="">
+                </div>
+            </main>
+        </section>
+        <section id="portfolio">
+            <div class="gallery">
+                <div class="image">
+                    <a href="fitway.html">
+                        <img src="images/projects/Fitway1.jpg" alt="Fitway App">
+                        <div class="overlay"></div>
+                        <div class="title">
+                            <h1>Title</h1>
+                            <p>Caption caption caption</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="image">
+                    <a href="siebiega.html">
+                        <img src="images/projects/Siebiega.jpg" alt="Siebiega Website">
+                        <div class="overlay"></div>
+                        <div class="title">
+                            <h1>Title</h1>
+                            <p>Caption caption caption</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="image">
+                    <a href="astronomicapp.html">
+                      <img src="images/projects/AstronomicApp.jpg" alt="Aplikacja wydarzeń astronomicznych">
+                      <div class="overlay"></div>
+                      <div class="title">
+                          <h1>Title</h1>
+                          <p>Caption caption caption</p>
+                      </div>
+                    </a>
+                </div>
+                <div class="image">
+                    <a href="astronomicapp.html">
+                      <img src="images/projects/AstronomicApp.jpg" alt="Aplikacja wydarzeń astronomicznych">
+                      <div class="overlay"></div>
+                      <div class="title">
+                          <h1>Title</h1>
+                          <p>Caption caption caption</p>
+                      </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    <script defer>
+        const tape = document.querySelector('.tape');
+        window.addEventListener('scroll', () => {
+            document.querySelector('.top')
+            tape.style.transform =`rotate(${window.scrollY}deg)`
+        })
+    </script>
+
+    <script defer>
+        const b = document.querySelector('.hamburger');
+        b.addEventListener('click', (ev) => {
+            ev.preventDefault();
+            b.classList.toggle('active');
+            document.querySelector('.menu').classList.toggle('active');
+        })
+    </script>
+
+</body>
+</html>

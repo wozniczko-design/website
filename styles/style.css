@@ -1,0 +1,987 @@
+﻿* {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+header {
+    align-items: center;
+    background-color: white;
+    border-top: 7px #2f22bb solid;
+    height: 80px;
+    position: fixed;
+    width: 100vw;
+    z-index: 200;
+}
+
+header .logo {
+    width: 55px;
+}
+
+.center {
+    text-align: center;
+}
+
+.left, .right, .center {
+    display: inline-block;
+    vertical-align: middle;
+    width: 33.3%;
+ }
+
+.middle {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+header .link {
+    float: right;
+    opacity: 0.85;
+    width: 22px;
+}
+
+header .navigation {
+    font-size: 0;
+    padding: 0 20px;
+    position: absolute;
+    top: 50%;
+    width: 100%;   
+    z-index: 2;
+}
+
+header ul.hamburger {
+    cursor: pointer;
+    height: 23px;
+    opacity: 0.85;
+    position: relative;
+    z-index: 3;
+}
+
+header ul.hamburger li {
+    background: black;
+    height: 1px;
+    list-style: none;
+    opacity: 1;
+    position: absolute;
+    transition: .5s;
+    width: 23px;  
+}
+
+header ul.hamburger li:nth-child(1) {
+    top: 20%;
+    transform: translateY(-50%);
+}
+
+header ul.hamburger.active li:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+header ul.hamburger li:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+header ul.hamburger.active li:nth-child(2) {
+    opacity: 0;
+}
+
+header ul.hamburger li:nth-child(3) {
+    top: 80%;
+    transform: translateY(-50%);
+}
+
+header ul.hamburger.active li:nth-child(3) {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+header .menu {
+    background: white;
+    height: 100vh;
+    left: -100%;
+    line-height: 14vh;
+    position: fixed;
+    text-align: center;
+    top: 0;  
+    transition: .9s;
+    width: 100%;   
+    z-index: 2;
+}
+
+header .menu ul {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header .menu.active {
+    left: 0;
+    touch-action: none;
+}
+
+header .menu li {
+    list-style-type: none;
+    position: relative;
+}
+
+header .menu li a {
+    background: transparent;
+    box-sizing: border-box;
+    color: #262626; 
+    font-size: min(max(20px, 8vw), 35px);
+    font-weight: 600;
+    opacity: 0.35;
+    position: relative;
+    text-decoration: none;  
+    padding: 10px 20px;
+}
+
+header .menu li a:last-child {
+    white-space: nowrap; 
+}
+
+header .menu li a.open {
+    font-weight: 800;
+    opacity: 1;
+}
+
+a .link:last-child {
+    display: none;  
+}
+
+a:hover .link:last-child {
+    display: block;  
+}
+
+a:hover .link:first-child {
+    display: none; 
+}
+
+#slider {
+    height: 80vh;
+    position: fixed;
+    top: 80px;
+    z-index: 100;
+}
+
+main {
+    overflow: hidden;
+    position: relative;
+}
+
+main .text {
+    padding: 0 0 0 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-55%);
+    z-index: 1;
+}
+
+main h1 {
+    color: black;
+    font-size: 6.4vw;
+    margin-bottom: 10px;
+    width: 70vw;
+}
+
+main h2 {
+    font-size: 3.5vw;
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: 0.6px;
+    width: 70vw;
+}
+
+button {
+    background: linear-gradient(-45deg, #fb4992, #2f22bb, #fb4992, #fb4992, #fb4992, #2f22bb, #fb4992);
+    background-size: 350% 350%;
+    border: 0;
+    font-size: 0.7em;
+    font-weight: 900;
+    overflow: hidden;
+    position: relative;
+    padding: 3px;
+    text-transform: uppercase;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-animation: colors 8s ease infinite;
+    animation: colors 7s ease infinite;
+    transition: all 500ms ease-in-out;
+}
+
+button:hover, button:focus {
+    background: linear-gradient(-45deg, #fb4992, #fb4992);
+}
+
+.main-button {
+    background: white;
+    color: #0C1823;
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.main-button span::before{
+    background: url("../images/play.svg") no-repeat scroll center center / 100% auto;
+    content: "";
+    float: left;
+    height: 15px;
+    margin-right: 5px;
+    width: 14px;
+}
+
+@keyframes colors {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+main > .background {
+    height: 90vw;
+    left: -11%;
+    opacity: 0.3;
+    overflow: hidden;
+    position: relative;
+    width: 160vw;
+}
+
+.background  img {
+    display: block;
+    position: absolute;
+    width: 100%;
+}
+
+.background img:nth-child(1) {
+    bottom: 0;
+}
+
+.background  img:nth-child(2) {
+    bottom: 2%;
+    right: 13%;
+    width: 35%;
+}
+
+.background  img:nth-child(3) {
+    width: 100%;
+}
+
+#portfolio {
+    background-color: #2f22bb;
+    box-sizing: border-box;
+    padding: 20px;
+    position: absolute;
+    top: calc(90vw + 80px);
+    z-index: 100;
+}
+
+section .gallery {
+    font-size: 0;
+}
+
+section .image img {
+    height: auto;
+    width: 100%;
+}
+
+section .gallery p:first-child {
+    font-size: 20px;     
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+article {
+    background-color: #FAFAFA;
+}
+
+article .work, article .aboutme {
+    padding: 120px 20px 5px;
+    width: 100%;
+}
+
+article > img {
+    display: block;
+    height: 35vw;
+    margin: 0 auto 30px;
+    width: 90vw;
+}
+
+article .work .topic {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    position: relative;
+    width: auto;
+}
+
+article .topic::after {
+    background-color: #FB4992;
+    content: '';
+    height: 3px;
+    left: 0;
+    margin: 5px 0 60px;
+    position: absolute;
+    width: 8%;
+}
+
+article .work .description {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 24px;
+    margin-bottom: 50px;
+    width: auto;
+}
+
+article .work .description p:last-of-type {
+    margin-bottom: 0;   
+}
+
+article .work .description p {
+    margin-bottom: 20px;
+}
+
+article .work .description p span{
+    font-weight: 500;
+}
+
+article .work .picture {
+    margin-bottom: 25px;
+}
+
+article .work .picture img {
+    margin: 10px 0;
+    width: 100%;
+}
+
+article .aboutme {
+    min-height: 100vh;
+}
+
+article .aboutme h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+article .aboutme p {
+    font-size: 17px;
+    line-height: 25px;
+    margin-bottom: 15px;
+}
+
+article .aboutme p:last-of-type {
+    color:#2f22bb;
+    letter-spacing: 0.5px;
+    margin-top: 40px;
+}
+
+article .aboutme p span {
+    color:#2f22bb;
+    font-weight: 600;
+    letter-spacing: 0px;
+}
+
+article .aboutme .text > button {
+    font-size: 0.8em;
+    margin: 10px 0 40px;
+}
+
+article .aboutme img {
+    display: none;
+}
+
+@media (min-width: 530px) {
+
+    header .navigation {
+        padding: 0 30px;
+    }
+
+    #slider {
+        background-color: #FAFAFA;
+        height: calc(100vh - 80px);
+        top: 80px;
+        width: 100%;
+    }
+
+    main {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    main .text {
+        padding: 0 0 0 30px;
+        width: 70%;
+    }
+    
+    main .background {
+        height: 66vh;
+        left: 50%;
+        max-height: 330px;
+        max-width: 515px;
+        overflow: hidden;
+        position: relative;
+        transform: translateX(-50%);
+        width: 115vh;
+    }        
+
+    main img:nth-child(1) {
+        bottom: 0;
+    }
+    
+    main img:nth-child(2) {
+        bottom: 2%;
+        right: 13%;
+        width: 35%;
+    }
+    
+    main img:nth-child(3) {
+        height: 99%;
+        width: 100%;
+    }
+
+    main h1 {
+        font-size: min(max(17px, 3vh), 24px);
+        margin-bottom: 8px;
+    }
+    
+    main h2 {
+        font-size: min(max(10px, 1.7vh), 13px);
+        margin-bottom: 12px;
+    }
+
+    .main-button {
+        padding: 14px 15px;
+    }
+
+    main button a {
+        font-size: 12px;
+    }
+
+    main img:nth-child(1) {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 95%;
+    }
+    
+    main img:nth-child(3) {
+        bottom: 3%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    #portfolio {
+        padding: 60px 0;
+        position: absolute;
+        top: 100vh;
+    }
+
+    section .gallery {
+        left: 50%;
+        padding: 0 30px;
+        position: relative;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+    }
+    section .gallery {
+        left: auto;
+        position: relative;
+        top: auto;
+        transform: translate(0, 0);
+    }
+
+    section .image {
+        float: left;
+        position: relative;
+        width: 50%;
+    }
+
+    article .work, article .aboutme {
+        padding: 120px 30px 5px;
+    }
+
+}
+
+@media (min-width: 530px) and (max-height: 699px) and (orientation: portrait) {
+
+    header {
+        height: 17vh;
+    }
+
+    #portfolio {
+        height: calc(100vh - 17vh);
+        position: relative;
+        top: 100vh;
+    }
+
+    section .gallery {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    section .image {
+        float: left;
+        width: 50%;
+    }
+
+    article .work, article .aboutme {
+        padding: 25vh 30px 5px;
+    }
+
+}
+
+@media (min-width: 530px) and (min-height: 699px) and (orientation: portrait) {
+
+    header {
+        height: 14vh;
+    }
+
+    #slider {
+        height: 65vh;
+        top: 14vh;
+    }
+
+    #portfolio {
+        height: calc(100vh - 14vh);
+        position: relative;
+        top: calc(65vh + 14vh);
+    }
+
+    section .gallery {
+        position: absolute;
+        left: 50%;
+        max-width: 600px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    section .image {
+        float: left;
+        width: 50%;
+    }
+
+    article .work, article .aboutme {
+        padding: 20vh 30px 5px;
+    }
+
+}
+
+@media (hover: hover) {
+
+    .image:hover .overlay  {
+        opacity: 0.9;
+      }
+
+    .image:hover .title {
+        opacity: 1;
+    }
+
+}
+
+@media (min-width: 700px) {
+
+    header ul.hamburger {
+        display: none;
+    }
+
+    header .logo {
+        margin-top: 3px;
+        text-align: center;
+        width: 47px;
+    }
+
+    header .link {
+        width: 20px;
+    }
+
+    header .navigation {
+        left: 50%;
+        max-width: 800px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 80vw;
+    }
+
+    header .menu {
+        height: 30px;
+        left: 0;
+        line-height: 0;
+        position: relative;
+        text-align: right;
+        z-index: 3;
+    }
+
+    header .menu ul {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+
+    header .menu li {
+        display: inline;
+        height: auto;
+    }
+
+    header .menu li a {
+        color: #262626;
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    header .menu li a:last-child {
+        right: -15px;
+    }
+    
+    header .menu li a:hover {
+        color: #2f22bb;
+    }
+
+    .left {
+        width: 64.3%;
+    }
+
+    .center {
+        float: left;
+        text-align: left;
+        transform: translateY(0);
+        width: 18.3%;
+    }
+
+    .right {
+        transform: translateY(0);
+        width: 17.3%;
+    }
+
+    main .text {
+        padding: 0 50px;
+    }
+
+    main h1 {
+        font-size: 3.6vw;
+        margin-bottom: 12px;
+    }
+
+    main h2 {
+        font-size: 1.9vw;
+        margin-bottom: 22px;
+    }
+
+    main .background {
+        height: 54vw;
+        max-height: 540px;
+        max-width: 850px;
+        width: 85vw;
+    }
+
+    main button a {
+        font-size: 14px;
+    }
+
+    .main-button span::before {
+        height: 17px;
+        width: 16px;
+    }
+
+    .main-button {
+        padding: 2vw 2.6vw;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        transition: .3s ease;
+        background-color: #fb4992;
+    }
+      
+    .image .title {
+        color: white;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 90%;
+    }
+
+    .image .title h1 {
+        font-size: 24px;
+        font-weight: 900;
+        padding: 5px 0;
+    }
+
+    .image .title p {
+        font-size: 14px;
+    }
+      
+    section .gallery {
+        max-width: 800px;
+        width: 80vw;
+    }
+
+    article .work, article .aboutme {
+        padding: 20vh 30px 20px;
+        position: relative;
+        left: 50%;
+        max-width: 800px;
+        transform: translateX(-50%);
+        width: 80vw;
+    }
+
+    article .aboutme .text {
+        padding-left: 55px;
+        width: 84%;
+    }
+
+    article .aboutme .text, article .aboutme img {
+        float: left; 
+        display: inline; 
+    }
+
+    article .aboutme img {
+        display: block;
+        width: 16%;
+    }
+
+}
+
+@media (min-width: 700px) and (max-height: 699px) and (orientation: landscape) {
+    
+    header {
+        height: 17vh;
+    }
+
+    header .navigation {
+        max-width: 600px;
+    }
+
+    main .text {
+        padding: 0 40px;
+    }
+
+    main h1 {
+        font-size: 4.8vh;
+        margin-bottom: 12px;
+    }
+
+    main h2 {
+        font-size: 2.4vh;
+        margin-bottom: 18px;
+    }
+
+    .main-button {
+        padding: 2.6vh 3vh;
+    }
+
+    main .background {
+        height: 60vh;
+        width: 95vh;
+    }
+
+    #portfolio {
+        padding: 90px 0;
+        position: absolute;
+        top: 100vh;
+        width: 100%;
+    }
+
+    section .gallery {
+        left: 50%;
+        max-width: 600px;
+        padding: 0 30px;
+        position: relative;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    section .image {
+        float: left;
+        position: relative;
+        width: 50%;
+    }
+    
+    article .work, article .aboutme {
+        max-width: 600px;
+        padding: 25vh 30px 20px;
+        width: 80vw;
+    }
+
+}
+
+@media (min-width: 700px) and (max-height: 500px) and (orientation: landscape) {
+    
+    header {
+        height: 80px;
+    }
+
+    header .navigation {
+        width: 100vw;
+    }
+
+    main .text {
+        padding: 0 25px;
+    }
+
+    main h1 {
+        font-size: 4.8vh;
+        margin-bottom: 10px;
+    }
+
+    main h2 {
+        font-size: 2.7vh;
+        margin-bottom: 13px;
+    }
+
+    main button a {
+        font-size: 12px;
+    }
+
+    .main-button span::before {
+        height: 14px;
+        width: 13px;
+    }
+
+    .main-button {
+        padding: 2.4vh 2.8vh;
+    }
+
+    #portfolio {
+        padding: 50px 0;
+    }
+
+    section .gallery {
+        max-width: 600px;
+        width: 100vw;
+    }
+
+    article .work, article .aboutme {
+        max-width: 600px;
+        padding: 120px 30px 20px;
+    }
+
+}
+
+@media (min-width: 700px) and (min-height: 699px) and (orientation: landscape) {
+
+    header {
+        border-top: 0.7vh #2f22bb solid;
+        height: 14vh;
+    }
+
+    header .logo {
+        width: 5.5vh;
+    }
+
+    header .menu li a {
+        font-size: min(max(13px, 1.5vh), 25px);
+        padding: 2vh;
+    }
+
+    header .link {
+        width: 2.4vh;
+    }
+
+    header .navigation {
+        max-width: 900px;
+        padding: 0 60px;
+        width: 90vw;
+    }
+
+    #portfolio {
+        height: calc(100vh - 14vh);
+        position: relative;
+        top: 100vh;
+    }
+
+    main .text {
+        padding: 0 60px;
+    }
+
+    main h1 {
+        font-size: 40px;
+        margin-bottom: 14px;
+    }
+
+    main h2 {
+        font-size: 19px;
+        margin-bottom: 30px;
+    }
+
+    main button a {
+        font-size: 15px;
+    }
+
+    .main-button span::before {
+        height: 17px;
+        width: 16px;
+    }
+
+    .main-button {
+        padding: 19px 30px;
+    }
+
+    main img:nth-child(1) {
+        bottom: 3%;
+    }
+
+    main img:nth-child(2) {
+        bottom: 3%;
+    }
+
+    main .background {
+        height: 57vw;
+        max-height: 570px;
+        max-width: 900px;
+        width: 90vw;
+    }
+
+    .image .title h1 {
+        font-size: 30px;
+        padding: 7px 0;
+    }
+
+    .image .title p {
+        font-size: 16px;
+    }
+
+    section .gallery {
+        padding: 0 60px;
+        position: absolute;
+        left: 50%;
+        max-width: 900px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 90vw;
+    }
+
+    section .image {
+        float: left;
+        width: 50%;
+    }
+
+    article .work, article .aboutme {
+        padding: 20vh 60px 20px;
+        max-width: 900px;
+        width: 90vw;
+    }
+
+}
+

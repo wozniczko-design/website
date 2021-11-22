@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Adrian Woźniczko</title>
+    <link rel="icon" href="images/play.svg">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="navigation">
+            <div class="left">
+                <ul class="hamburger middle">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <div class="menu">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="./aboutme">O mnie + Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="center middle">
+                <a href="/" title="Logo with 'Back to the homepage' power">
+                    <img class="logo" src="images/AW-logo.svg" alt="Logo">
+                </a>
+            </div>
+            <div class="right middle">
+                <a href="" title="My behance profile">
+                    <img class="link" src="images/behance-logo.svg" alt="Behance">
+                    <img class="link" src="images/behance-logo-two.svg" alt="Behance">
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <article>
+        <div class="work">
+            <div class="topic">
+                <p>FitWay</p>
+            </div>
+            <div class="description">
+                <p>To autorski projekt aplikacji fana ćwiczeń i zdrowego trybu życia, stworzona w ramach UX Case Study.</p>
+                <p>Tworzenie wymarzonej sylwetki wiąże się z monitorowaniem swojego trybu życia. Do tego bardzo często przydają się notatki, które z każdym tygodniem się zmieniają. Do menu dodajemy potrawy, zmieniamy ćwiczenia. Na pomoc przychodzi FitWay.</p>
+            </div>
+            <div class="topic">
+                <p>Research</p>
+            </div>
+            <div class="description">
+                <p>Żeby zrozumieć problemy i potrzeby użytkowników przebadałem ponad 20 użytkowników, którym zależy na zmianie sylwetki. Z badań wynika, że osoby te dzielą się na różne poziomy zaawansowania. Podzieliłem badanych na początkujących, osoby o średnim poziomie zaawansowania i wyższym stopniu zaawansowania. </p>
+            </div>
+            <div class="topic">
+                <p>Problem</p>
+            </div>
+            <div class="description">
+                <p>Z przeprowadzonych badań wynika, że osoby chcące zmienić swoją sylwetkę dzielą się na trzy grupy. Stworzyłem persony ukazujące potrzeby i problemy każdej grupy użytkowników.</p>
+            </div>
+            <div class="picture">
+                <img src="images/projects/FitWay-persona1.jpg" alt="Persona">
+                <img src="images/projects/FitWay-persona2.jpg" alt="Persona">
+                <img src="images/projects/FitWay-persona3.jpg" alt="Persona">
+            </div>
+            <div class="topic">
+                <p>Funkcje</p>
+            </div>
+            <div class="description">
+                <p>Dzięki badaniom wyodrębniłem funkcje na których chciałem skupić się najbardziej.</p>
+                <p><span>Wykresy</span><br>Najważniejszą funkcją dla użytkownika są wykresy pokazujące jego postępy. Od nich zależy ewentualna korekta ćwiczeń oraz diety.</p>
+                <p><span>Plan dnia</span><br>Pokazuje o której godzinie nastąpi posiłek i trening. Użytkownik może wybrać gotowy plan lub stworzyć go samemu.</p>                
+                <p><span>Notatki</span><br>Problem z danym ćwiczeniem, uwagi, pomysły. Wszytko co użytkownik uzna za warte zapamiętania może zapisać w notatniku.</p>
+            </div>
+            <div class="topic">
+                <p>Aplikacja</p>
+            </div>
+            <div class="description">
+                <p>Zdjęcia przedstawiają widok strony głównej aplikacji oraz strony głównej wersji webowej. Pozostałe widoki są w fazie testów.</p>
+            </div>
+            <div class="picture scale">
+                <img src="images/projects/Fitway1.jpg" alt="FitWay App">
+                <img src="images/projects/Fitway2.jpg" alt="FitWay App">
+            </div>
+        </div>
+    </article>
+
+    <script defer>
+        const b = document.querySelector('.hamburger');
+        b.addEventListener('click', (ev) => {
+            ev.preventDefault();
+            b.classList.toggle('active');
+            document.querySelector('.menu').classList.toggle('active');
+        })
+    </script>
+</body>
+</html>

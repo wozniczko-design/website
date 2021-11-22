@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html lang="pl" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Adrian Woźniczko</title>
+    <link rel="icon" href="images/play.svg">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="navigation">
+            <div class="left">
+                <ul class="hamburger middle">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <div class="menu">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="./aboutme">O mnie + Kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="center middle">
+                <a href="/" title="Logo with 'Back to the homepage' power">
+                    <img class="logo" src="/images/AW-logo.svg" alt="Logo">
+                </a>
+            </div>
+            <div class="right middle">
+                <a href="" title="My behance profile">
+                    <img class="link" src="/images/behance-logo.svg" alt="Behance">
+                    <img class="link" src="/images/behance-logo-two.svg" alt="Behance">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <article>
+        <div class="work">
+            <div class="topic">
+                <p>Astronomic App</p>
+            </div>
+            <div class="description">
+                <p>Jednodniowy challenge polegający na zaprojektowaniu aplikacji w jeden dzień.</p>
+                <p>Aplikacja to kalendarz wydarzeń astronomicznych. Kalendarz pokazuje dni w których ma miejsce na niebie wydarzenie warte uwagi wraz z krótkim opisem wydarzenia.</p>
+                <p>Specjalną funkcją aplikacji jest możliwość przypomnienia użytkownikowi o danym wydarzeniu.</p>
+            </div>
+            <div class="picture">
+                <img src="images/projects/AstronomicApp.jpg" alt="Aplikacja wydarzeń astronomicznych">
+            </div>
+        </div>
+    </article>
+    
+    <script defer>
+        const b = document.querySelector('.hamburger');
+        b.addEventListener('click', (ev) => {
+            ev.preventDefault();
+            b.classList.toggle('active');
+            document.querySelector('.menu').classList.toggle('active');
+        })
+    </script>
+</body>
+</html>
