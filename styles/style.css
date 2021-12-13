@@ -207,7 +207,7 @@ button {
     text-transform: uppercase;
     -webkit-tap-highlight-color: transparent;
     -webkit-animation: colors 8s ease infinite;
-    animation: colors 7s ease infinite;
+    animation: colors 5s ease infinite;
     transition: all 500ms ease-in-out;
 }
 
