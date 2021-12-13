@@ -203,7 +203,7 @@ button {
     font-weight: 900;
     overflow: hidden;
     position: relative;
-    padding: 3px;
+    padding: 4px;
     text-transform: uppercase;
     -webkit-tap-highlight-color: transparent;
     -webkit-animation: colors 8s ease infinite;
